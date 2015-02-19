@@ -1,0 +1,5 @@
+Artist.create({name:"Michael Jackson", solo:true, genre:"Pop"})
+Artist.create({name:"Maroon 5", solo:false, genre:"Pop"})
+Artist.create({name:"Lifehouse", solo:false, genre:"rock"})
+Artist.create({name:"Chris Tomlin", solo:true, genre:"Christian"})
+Artist.create({name:"Fela", solo:true, genre:"Afro-Beat"})

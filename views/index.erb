@@ -1,0 +1,10 @@
+<% erb :'partials/_header' %>
+
+<h1>List of Artists</h1>
+<ul>
+<% @artists.each do |artist| %>
+  <li><%= artist.name %></li>
+<% end %>
+</ul>
+
+<% erb :'partials/_footer' %>
