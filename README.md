@@ -16,23 +16,23 @@ Research
 Before you start coding, look up the answers the following questions
 and place them inline below:
 
-1. What are some books that Martin Fowler has written?
-2. What's the difference between "active record" and "ActiveRecord"?
-3. Is the "active record" pattern an ORM?
-4. Why might we want to use an ORM in our code?
+1. What are some books that Martin Fowler has written? NoSQL Distiller, Refactoring, Programming
+2. What's the difference between "active record" and "ActiveRecord"? active record pattern refers to the architecture of storing data, while ActiveRecord is a type of active record system
+3. Is the "active record" pattern an ORM? No, ORM is a type of active record pattern
+4. Why might we want to use an ORM in our code? It helps with sanitizing our data and protecting against injection. It also helps manage our database and reduce the HTML we have to type.
 5. What gem do we need to allow Sinatra to interact with ActiveRecord?
-6. What is `rake`?
-7. What is a database migration?
-8. What command can we use to create a new ActiveRecord migration?
-9. What command runs our existing migrations?
-10. What commands reverses a migration?
+6. What is `rake`? Sinatra-ActiveRecord
+7. What is a database migration? It refers to documentation on changing the state of our database, as well and actually being the code responsible for doing the change.
+8. What command can we use to create a new ActiveRecord migration? rake db:migration NAME=create_product
+9. What command runs our existing migrations? rake db:migrate
+10. What commands reverses a migration? rake db:rollback
 11. What command tells us which migrations have run and which have
-not?
-12. Which class do we have to extend if we want to create a new model?
+not?rake db:migrate:status
+12. Which class do we have to extend if we want to create a new model? ActiveRecord::Base
 13. What's the difference between ActiveRecord's `.new` and `.create`
-methods?
+methods? new creates an instance but doe not add it to the class
 14. What's the difference between ActiveRecord's `.find` and
-`.find_by` methods?
+`.find_by` methods? 
 15. What's the difference between ActiveRecord's `.find_by` and
 `.where` methods?
 16. What ActiveRecord method do we use to change a value in the
