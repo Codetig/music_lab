@@ -1,0 +1,9 @@
+<% erb :'partials/_header' %>
+<h2>Add Artist</h2>
+<form action="/artists" method="POST">
+  <label for="a-name">Name:</label><input type="text" name="name" id="a-name">
+  <label for="solo">Solo Artist?</label><input type="text" name="solo" id="solo">
+  <label for="genre">Genre:</label><input type="text" name="genre" id="genre">
+  <input type="submit" value="Add Artist">
+</form>
+<% erb :'partials/_footer' %>

@@ -1,0 +1,13 @@
+<% erb :'partials/_header' %>
+<h2>Edit Artist</h2>
+<form action="/artists/<%= @artist.id %>" method="POST">
+<input type="hidden" name="_method" value="put">
+  <label for="a-name">Name:</label>  <input type="text" name="name" id="a-name" value="<%= @artist.name %>">
+  <label for="solo">Solo Artist?</label>  <input type="text" name="solo" id="solo" value="<%= @artist.solo %>">
+  <label for="genre">Genre:</label>  <input type="text" name="genre" id="genre" value="<%= @artist.genre %>"><input type="submit" value="Update">
+</form>
+<form action="/artists/<%= @artist.id %>" method="POST">
+<input type="hidden" name="_method" value="delete"><input type="submit" value="Delete">
+</form>
+
+<% erb :'partials/_footer' %>
