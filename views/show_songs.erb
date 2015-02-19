@@ -1,0 +1,14 @@
+<% erb :'partials/_header' %>
+<a href="/artists">Home</a>
+
+<h2>Songs by <%= @artist.name %></h2>
+
+<ul>
+  <% @songs.each do |song| %>
+  <li><%= song.title %>  <a href="/artists/<%= @artist.id %>/songs/<%= song.id %>/edit">Edit</a></li>
+  <form action="/artists/<%= @artist.id %>/songs/<%= song.id %>" method="POST"><input type="hidden" name="_method" value="delete"><input type="submit" value="Delete"></form>
+  <% end %>
+</ul>
+
+<a href="/artists/<%= @artist.id %>/songs/new">add another song</a> 
+<% erb :'partials/_footer' %>

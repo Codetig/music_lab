@@ -1,0 +1,13 @@
+<% erb :'partials/_header' %>
+<h2>New Song</h2>
+
+<p>New song by <%= @artist.name %></p>
+
+<form action="/artists/<%= @artist.id %>/songs" method="POST">
+  <label for="title">Song Title: </label><input type="text" name="title" id="title">
+  <input type="submit" value="Add Song">
+</form>
+
+<a href="/artists">Home</a>
+
+<% erb :'partials/_footer' %>
